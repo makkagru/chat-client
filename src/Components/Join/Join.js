@@ -26,12 +26,13 @@ const Root = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 96vh;
+  height: 100vh;
   background-color: #EFEEEE;
 `;
 
 const Content = styled.div`
-  width: 35%;
+  width: 90%;
+  max-width: 400px;
   height: 35%;
   background: #fff;
   text-align: center;
@@ -39,6 +40,9 @@ const Content = styled.div`
   -moz-box-shadow: 0px 0px 66px 0px rgba(0,0,0,0.18);
   box-shadow: 0px 0px 66px 0px rgba(0,0,0,0.18);
   padding: 20px 0;
+  @media(min-width: 500px) {
+    width: 35%;
+  }
 `;
 
 const H1 = styled.div`
@@ -49,9 +53,13 @@ const H1 = styled.div`
 
 const InputsContent = styled.div`
   margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Input = styled.input`
+  width: 50%;
   padding: 10px;
   border: none;
   border-bottom: 1px solid #29C9E9;
