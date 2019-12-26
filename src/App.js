@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import GlobalStyle from './assets/GlobalStyle';
-import Join from './Components/Join';
-import Chat from './Components/Chat';
+import Join from './pages/Join';
+import Chat from './pages/Chat';
 
 const App = () => {
   return (
