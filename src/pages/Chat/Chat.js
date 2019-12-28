@@ -29,7 +29,6 @@ const Chat = ({ location }) => {
   }, [ENDPOINT, location.search]);
 
   useEffect(() => {
-    console.log(123);
     socket.on('message', (message) => {
       console.log(message, 'message');
       setMessages([...messages, message]);
@@ -39,12 +38,9 @@ const Chat = ({ location }) => {
   const sendMessage = (e) => {
     e.preventDefault();
     if(message) {
-      console.log(message);
       socket.emit('sendMessage', message, () => setMessage(''));
     }
   }
-
-  console.log(message, messages);
 
   return (
     <div>

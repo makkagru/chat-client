@@ -31,7 +31,10 @@ const InputContent = styled.div`
   width: 85%;
 `;
 
-const Input = styled.input`
+const Input = styled.textarea`
+  border: #29C9E9 1px solid;
+  outline: none;
+  resize: none;
   width: 100%;
   height: 100%;
 `;
