@@ -17,8 +17,9 @@ const addUser = ({id, name, room}) => {
 
 const removeUser = (id) => {
   const index = users.find(u => u.id === id);
-  if (index)
-    users.splice(index, 1);
+  if (index) {
+    return users.splice(index, 1)[0];
+  }
 }
 
 const getUser = (id) => users.find(u => u.id === id);

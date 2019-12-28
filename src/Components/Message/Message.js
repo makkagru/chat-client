@@ -10,7 +10,7 @@ const Message = ({ message: {user, text}, name }) => {
   };
 
   return (
-    <div>
+    <Content>
       {isSentByCurrentUser ? (
         <MyMessageContent>
           <MyMessage>
@@ -27,9 +27,13 @@ const Message = ({ message: {user, text}, name }) => {
           </p>
         </OtherMessageContent>
       )}
-    </div>
+    </Content>
   );
 }
+
+const Content = styled.div`
+  margin-top: 10px;
+`;
 
 const MyMessageContent = styled.div`
   display: flex;

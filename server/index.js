@@ -34,8 +34,10 @@ io.on('connection', socket => {
 
   socket.on('disconnect', () => {
     const user = getUser(socket.id);
-    socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} had left` });
-    removeUser(socket.id);
+    if (user) {
+      socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} had left` });
+      removeUser(socket.id);
+    }
   });
 })
 

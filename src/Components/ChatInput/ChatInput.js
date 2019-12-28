@@ -11,7 +11,7 @@ const ChatInput = ({message, setMessage, sendMessage}) => {
          onKeyPress={(e) => e.key === 'Enter' ? sendMessage(e) : null}
          placeholder="Type your message" />
       </InputContent>
-      <SendButtonContent>
+      <SendButtonContent onClick={(e) => sendMessage(e)}>
         <SendButton>Send</SendButton>
       </SendButtonContent>
     </Content>
@@ -34,13 +34,18 @@ const InputContent = styled.div`
 const Input = styled.textarea`
   border: #29C9E9 1px solid;
   outline: none;
+  padding: 10px;
+  margin-right: 20px;
   resize: none;
-  width: 100%;
+  width: 98%;
   height: 100%;
 `;
 
 const SendButtonContent = styled.div`
   width: 15%;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const SendButton = styled.button`
